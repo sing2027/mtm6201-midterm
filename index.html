@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singh Restaurant</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+             <!-- header section starting -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!-- header section ending -->
+
+            
+            
+                                       <!-- starts Home page -->
+
+    <main>
+        <section class="hero">
+            <button id="showButton" onclick="document.querySelector('.image-container').classList.add('show')">Welcome</button>
+            <div class="image-container">
+                <img src="images/welcome2.jpg" alt="Your Image">
+            </div>
+
+            <section>
+            <h1>Welcome to Singh Restaurant</h1>
+            <p>Delicious Food and Amazing Atmosphere</p>
+            <!-- <a href="#menu" class="cta-button">View Menu</a> -->
+            </section>
+
+             <!-- Menu Section -->
+    <section id="menu" class="hidden">
+        <img src="images/menu.avif" alt="menu image">
+    </section> 
+
+    <!-- JavaScript function to toggle the visibility of the menu section -->
+<script>
+    function showMenu() {
+        const menuSection = document.getElementById("menu");
+        menuSection.style.display = "block"; // Show the menu section
+        window.location.href = "#menu"; // Scroll to the menu section
+    }
+</script>
+
+<!-- Updated CTA button with an "onclick" attribute -->
+<a href="javascript:void(0);" class="cta-button" onclick="showMenu()">View Menu</a>
+
+        
+        <section class="image-gallery">
+            <div class="image-item">
+                <img src="images/image1.avif" alt="Food 1">
+                <p>Delicious Dish</p>
+            </div>
+            <div class="image-item">
+                <img src="images/image2.jpg" alt="Food 2">
+                <p>Exquisite Cuisine</p>
+            </div>
+            <div class="image-item">
+                <img srcset="images/image3.jpg" alt="Food 3">
+                <p>Gourmet Experience</p>
+            </div>
+            <div class="image-item">
+                <img srcset="images/image4.jpeg" alt="Food 4">
+                <p>Artful Presentation</p>
+            </div>
+        </section>
+    </main>
+
+                        <!-- CSS animations for Home Page -->
+     <style>
+        .hero {
+            animation: fadeInUp 1s both;
+        }
+
+        .image-item {
+            animation: fadeIn 1s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <!-- End CSS animations for Home Page -->
+    
+                                               <!-- End home page -->
+
+
+                                               <!-- starts About Page -->
+  <section id="About">                                           
+<main>
+<section class="about">
+ <h1>About Us</h1>
+ <p>We are a passionate team dedicated to providing you with the best dining experience.</p>
+ <div class="image-gallery">
+ <div class="image-item">
+ <img srcset="images/interior1.jpg 1200w, images/interior1.jpg 600w" alt="Restaurant Interior 1">
+ <p>Cozy Ambiance</p>
+ </div>
+
+ <div class="image-item">
+ <img srcset="images/interior2.jpg 1200w, images/interior2.jpg 600w" alt="Restaurant Interior 2">
+ <p>Elegant Decor</p>
+ </div>
+ <div class="image-item">
+ <img srcset="images/interior3.jpg 1200w, images/interior3.jpg 600w" alt="Chef at Work">
+ <p>Clean Environment</p>
+ </div>
+ <div class="image-item">
+ <img srcset="images/interior4.jpg 1200w, images/interior4.jpg 600w" alt="Gourmet Dishes">
+ <p>Attractive Design</p>
+</div>
+
+    <div class="image-item">
+    <img srcset="images/food1.jpg 1200w, images/food1.jpg 600w" alt="food1 ">
+    <p>
+    Combo Offer
+    $30
+    </p>
+    </div>
+   
+    <div class="image-item">
+    <img srcset="images/food2.jpg 1200w, images/food2.jpg 600w" alt="food2">
+    <p>
+     Discount
+     20%
+    </p>
+    </div>
+    <div class="image-item">
+    <img srcset="images/food3.jpg 1200w, images/food3.jpg 600w" alt="food3">
+    <p>
+    Enjoy Beverges
+    $3
+    </p>
+    </div>
+    <div class="image-item">
+    <img srcset="images/food4.jpeg 1200w, images/food4.jpeg 600w" alt="food4">
+    <p>
+     Delicious food
+     $49
+   </p>
+   </div>
+</section>
+</main>
+                           
+                        
+                                      <!-- End About Page -->
+
+
+
+                                      <!-- starts contact page -->
+     <section id="Contact">
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions or feedback, please feel free to reach out to us.</p>
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button class="cta-button">Send Message</button>
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <img src="images/location-icon.png" alt="Location Icon">
+                    <p>123 Restaurant St,<br> City, Country</p>
+                </div>
+                <div class="info-item">
+                    <img src="images/phone-icon.png" alt="Phone Icon">
+                    <p>+1 (123) 456-7890</p>
+                </div>
+                <div class="info-item">
+                    <img src="images/email-icon.png" alt="Email Icon">
+                    <p>info@restaurantname.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+        <footer>
+            <p>&copy; 2023 Singh Restaurant</p>
+        </footer>
+        
+                                   
+                                 <!-- End Contact Page -->
+
+</body>
+</html>
